@@ -49,15 +49,18 @@ fig_sales = go.Figure(data=[
     go.Bar(name="予算", x=df2["division"], y=df2["sales"]),
     go.Bar(name="実績", x=df3["division"], y=df3["sales"]),
 ])
-fig_sales.update_layout(height=300,
-                      width=600,
-                      margin={'l': 20, 'r': 20, 't': 0, 'b': 0},
-                      legend=dict(
-                          yanchor="top",
-                          y=0.99,
-                          xanchor="right",
-                          x=0.99),
-                      barmode='group')  # barmode='stack')
+fig_sales.update_layout(
+    height=300,
+    width=600,
+    margin={'l': 20, 'r': 20, 't': 0, 'b': 0},
+    legend=dict(
+        yanchor="top",
+        y=0.99,
+        xanchor="right",
+        x=0.99,
+    ),
+    barmode='group',
+)  # barmode='stack')
 fig_sales.update_xaxes(title_text="部署")
 fig_sales.update_yaxes(title_text="金額")
 
@@ -66,15 +69,18 @@ fig_profits = go.Figure(data=[
     go.Bar(name="予算", x=df2["division"], y=df2["profits"]),
     go.Bar(name="実績", x=df3["division"], y=df3["profits"]),
 ])
-fig_profits.update_layout(height=300,
-                      width=600,
-                      margin={'l': 20, 'r': 20, 't': 0, 'b': 0},
-                      legend=dict(
-                          yanchor="top",
-                          y=0.99,
-                          xanchor="right",
-                          x=0.99),
-                      barmode='group')  # barmode='stack')
+fig_profits.update_layout(
+    height=300,
+    width=600,
+    margin={'l': 20, 'r': 20, 't': 0, 'b': 0},
+    legend=dict(
+        yanchor="top",
+        y=0.99,
+        xanchor="right",
+        x=0.99,
+    ),
+    barmode='group',
+)  # barmode='stack')
 fig_profits.update_xaxes(title_text="部署")
 fig_profits.update_yaxes(title_text="金額")
 
